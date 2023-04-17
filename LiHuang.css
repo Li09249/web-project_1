@@ -1,0 +1,1030 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+a{
+    text-decoration: none !important;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Style for LiHuang1.html */
+/* Header Style LiHuang1.html*/
+.header-container{
+    max-width:100% !important;
+    height:40px;
+    background-color:#6F6D5E;
+}
+.header-left{
+    float: left;
+    width: 29%;
+    /*height: 40px;*/
+    line-height: 40px;
+    font-size: 1vmin;
+    color: white;
+    padding-left: 1%;
+    /*background-color: #EA0B1A;*/
+}
+.header-rest{
+    float: left;
+    width: 48%;
+    /*height: 40px;*/
+    padding-left: 12%;
+    line-height: 40px;
+    font-size: 1vmin;
+    color: white;
+    margin-right: 10%;
+    /*background-color: greenyellow;*/
+}
+
+/* Nav Style LiHuang1.html*/
+.nav-container{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    /*background-color: #8E9FAF;*/
+}
+.nav{
+    position: relative;
+    width: 100%;
+    height:60px;
+    margin: 0 auto;
+    /*box-shadow: 0 5px 20px rgba(0,0,0,0.2);*/
+    /*background-color: #65B8AA;*/
+}
+.nav-logo{
+    float: left;
+    width: 30%;
+    line-height: 60px;
+    font-size: 2vmin;
+    text-align: center;
+    /*background-color: #EA0B1A;*/
+}
+.nav-logo a{
+    color: #32363C;
+}
+.nav-logo a:hover{
+    display: block;
+    color: #B6B6B6;
+}
+.nav-logo span{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url("images/logo.png") no-repeat;
+    vertical-align: middle;
+}
+.nav-bar{
+    float: left;
+    width: 50%;
+    line-height: 60px;
+    /*background-color: greenyellow;*/
+}
+.nav-bar li{
+    display: inline-block;
+    float: left;
+    margin-left: 2%;
+    margin-right: 5%;
+    font-size: 1vmin;
+    /*background-color: #65B8AA;*/
+}
+.nav-bar li a{
+    position: relative;
+    color: #32363C;
+    padding: 8px 0;
+    /*background-color: #65B8AA;*/
+}
+.nav-bar li a:hover{
+    color: #B6B6B6;
+}
+.nav-bar li a:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background: #32363C;
+    transition: all 0.3s ease;
+}
+.nav-bar li a:hover:before{
+    width: 100%;
+}
+.nav-bar li.center a:hover:before{
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.nav-menu{
+    display: none;
+    /*float: left;*/
+    width: 20%;      /* menu的宽度随意，不受限，只要匹配视觉效果即可 */
+    line-height: 60px;
+    text-align: center;
+    /*background-color: #098B8C;*/
+}
+.nav-menu a span{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("images/menu.png") no-repeat;
+    vertical-align: middle;
+}
+
+/* Menu Drop LiHuang1.html*/
+.menu-drop{
+    display: none;
+    position:absolute;
+    top:60px;
+    left: 0;
+    /*margin-left:-56%;*/
+    width:100%;
+    height:300px;
+    text-align: left;
+    box-shadow: 0 1px 2px #B6B6B6;
+    z-index: 999;
+    background-color:#F6F6F6;
+}
+.menu-drop li{
+    line-height: 60px;
+    /*background-color: red;*/
+}
+.menu-drop li a{
+    color: #32363C;
+    padding-left: 2%;
+}
+.menu-drop a:hover{
+    display: block;
+    color: #FFFFFF;
+    background-color: #B6B6B6;
+}
+.nav-menu li:hover>.menu-drop{
+    display: inline-block;
+}
+
+/* Banner Style for LiHuang1.html*/
+.banner-container{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.banner-img{
+    /*display: block;*/
+    width:100%;
+    height: auto;
+}
+.banner-img img{
+    width:100%;
+    height: auto;
+}
+.banner-text{        /*调整banner里小图片位置 √*/
+    position: absolute;
+    /*width: 18%;
+    height: 50%;*/
+    top: 5%;
+    left: 51.5%;
+    text-align: center;
+}
+.banner-text img{   /*调整banner里小图片大小 √*/
+    width: 38%;
+    height: 15%;
+    padding-top: 2%;
+}
+.banner-text p{
+    font-size: 1.6vmin;
+    color: #303030;
+    line-height: 160%;
+    padding: 5% 0 6%;
+    width: 60%;
+    margin: 0 auto;
+}
+.banner-text input{
+    font-size: 1.6vmin;
+    font-weight: 600;
+    color: #303030;
+    height: 35px;
+    background-color:#fefefb;
+    border: none;
+    cursor: pointer;
+    border-radius: 88px;
+    padding: 0 6%;
+}
+.banner-text input:hover{
+    border: 3px solid #FFFFFF;
+    background-color: #303030;
+    color: #fefefb;
+    /*transition: 0.3s ease;*/
+}
+
+/* Sale Style for LiHuang1.html*/
+.sale-container{
+    width: 100%;
+    height: auto;
+    /*margin: 1% 0 3%;*/
+    /*border-top: 1px solid #B6B6B6;*/
+    /*background-color: #B6B6B6;*/
+}
+.sale{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    justify-content: space-around;
+    border-bottom: 1px solid #B6B6B6;
+    margin-top: 20px !important;
+    /*background-color: #c1908b;*/
+}
+.sale .slide{
+    margin-bottom: 2%;
+    overflow: hidden;
+    transition: 0.5s;
+    position: relative;
+    border-radius: 10px;
+    /*background-color: aquamarine;*/
+}
+.hover-slide img{
+    border-radius: 10px;
+}
+.slide > img{
+    width: 100%;
+    height: calc(100% - 10vh);
+    object-fit: cover;
+    transition: 0.5s;
+    /*display: block;
+    background-size: cover;
+    background-repeat: no-repeat;*/
+}
+.sale .slide:hover{
+    flex:1 1 30% !important;
+}
+.sale .slide:hover > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+}
+.sale .slide span{
+    display: block;
+    height: 20%;
+    width: 20%;
+    text-align: center;
+    position: absolute;
+    top: 2%;
+    margin-left: 10%;
+    border-radius: 50px;
+}
+.sale .slide h3{
+    font-size: 5vmin;
+    font-family: 'IBM Plex Serif', serif;
+    color:rgba(234,11,26);
+    padding-bottom: 5px;
+}
+.sale .slide p{
+    font-size: 3vmin;
+    color:#ffffff;
+}
+
+/* Trans1 Style for LiHuang1.html*/
+.trans1-container{
+    width: 100%;
+    height: 70px;
+    margin-top: 3%;  /*后加的，将trans1整体向下移3%*/
+}
+.trans1{
+    width: 100%;
+    height: 100%;
+    /*margin: 3% auto 0;*/    /*这行我给后注释了，感觉没用*/
+    text-align: left;
+    padding-left: 1%;
+    line-height: 220%;
+    /*background-color: #65B8AA;*/
+}
+.trans1 h2{
+    font-size: 2.5vmin;
+    font-weight: 200;
+    font-family: 'Merriweather', serif;
+    color: #333333;
+}
+.trans1 p{
+    font-size: 1vmin;
+    color: #B6B6B6;
+}
+
+/* Product List Style for LiHuang1.html*/
+.product-container{
+    width: 100%;
+    height: auto;
+    margin-top: 3%;  /*代做给的值是5%，我改成3%*/
+}
+.product{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0 !important;
+    /*background-color: #8E9FAF;*/
+}
+.list{
+    width: 23%;
+    height: 98%;
+    float: left;
+    /*background-color: #F5F5F5;*/
+    /*transition: transform 0.9s;*/
+}
+.list img{
+    width: 100%;
+    height: 83%;
+    background-size: cover;
+    margin-top: 3%;
+}
+.list:hover{
+    /*transform: translateY(-24px);*/
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+}
+.list h3{
+    text-align: left;
+    padding: 13px 0 13px 1px;
+    font-size: 1.6vmin;
+    color: #393A3C;
+}
+.list p{
+    text-align: left;
+    color: #2D5562;
+    font-size: 1.2vmin;
+    padding-left: 1px;
+}
+
+/* Trans2 Style for LiHuang1.html*/
+.trans2-container{
+    width: 100%;
+    height: auto;
+}
+.trans2{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 220%;
+    /*background-color: #65B8AA;*/
+}
+.trans2-line{
+    display: inline-block;
+    width: 100%;
+    height: 5%;
+    margin: 3% 0;
+    border-bottom: 1px solid #B6B6B6;
+}
+.trans2 h2{
+    font-size: 2.5vmin;
+    font-weight: 200;
+    font-family: 'Merriweather', serif;
+    color: #333333;
+    /*padding-left: 3%;*/
+}
+
+/* Slideshow Style for LiHuang1.html*/
+.slideshow-container{
+    width: 100%;
+    margin-bottom: 1%;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slideshow-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-color: #F5F3F1;*/
+}
+.slideshow{
+    position: relative;
+    width: 900px;
+    height: 522px;
+    overflow-x: hidden;
+    border-radius: 20px;
+    border: 5px solid #FFFFFF;
+    /*box-shadow: 20px 30px 20px rgba(0,0,0,0.5);*/
+}
+.images{
+    position: absolute;
+    width: 300%; /*山羊是3张图*/
+    height: 100%;
+    display: flex;
+    left: 0;
+    transition: 0.2s;
+    padding-left: 0;
+}
+.img{
+    width: 100%;
+    background-size: cover;
+}
+.img:nth-child(1){
+    background-image: url("images/slideshow1.jpg");
+}
+.img:nth-child(2){
+    background-image: url("images/slideshow2.png");
+}
+.img:nth-child(3){
+    background-image: url("images/slideshow3.jpg");
+}
+.min-images{
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 20px;
+    width: 40%;
+    right: 10%;
+}
+.min{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-size: cover;
+    border: 5px solid rgb(255,255,255,0.5);
+    background-position: -20px 0;  /*照片偏移量 */
+    z-index: 99;
+}
+.min:nth-child(1){
+    background-image: url("images/slideshow1.jpg");
+}
+.min:nth-child(2){
+    background-image: url("images/slideshow2.png");
+}
+.min:nth-child(3){
+    background-image: url("images/slideshow3.jpg");
+}
+.button{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+.button-left,
+.button-right{
+    font-size: 50px;
+    /*background-color: rgba(111,109,94,0.7);*/
+    padding: 0 20px;
+    line-height: 500px;
+    cursor: pointer;
+}
+
+/* Footer Style for LiHuang1.html*/
+.footer-container{
+    width: 100%;
+    height: auto;
+    background-color: #F5F5F5;
+}
+.footer{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    /*background-color: #F5F5F5;*/
+}
+.footer-top{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    font-size: 2.5vmin;
+    font-family: 'Merriweather', serif;
+    color: #333333;
+    padding-top:2%;
+    margin-bottom: 1%;
+    /*background-color: #EA0B1A;*/
+}
+.footer-bottom{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /*background-color: #8E9FAF;*/
+}
+.footer-bottom .box{
+    height: 80%;
+    text-align: center;
+    /*background-color: #65B8AA;*/
+}
+.footer-bottom .box img{
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+}
+.footer-bottom .box h1{
+    font-size: 1.8vmin;
+    font-weight: 400;
+    font-family: 'Merriweather', serif;
+    color: #333333;
+    padding: 10% 0 10%;
+}
+.footer-bottom .box p{
+    font-size: 1vmin;
+    color: #333333;
+}
+.footer-bottom .box span{
+    display: inline-block;
+    width: 30%;
+    height: 5%;
+    border-bottom: 1px solid #333333;
+    margin-bottom: 2%;
+}
+
+/* Body Bottom Style for LiHuang1.html*/
+.body-bottom{
+    width: 100%;
+    height:40px;
+    background-color:#6F6D5E;
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+}
+.body-bottom p{
+    line-height: 40px;
+    font-size: 1.5vmin;
+    color: #FFFFFF;
+}
+
+/* style for LiHuang2.html */
+/* Trans Box Style */
+.trans-box{
+    width: 100%;
+    height: 5px;
+    margin: 0.5% 0 0.2%;
+    border-top: 1px solid #B6B6B6;
+    /*background-color: #65B8AA;*/
+}
+
+/* Product Details Style for LiHuang2.html*/
+.details-container{
+    width: 100%;
+    height: auto;
+    /*height: 880px;*/
+}
+.details{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 10px 3px rgba(0,0,0,0.3);
+    margin-left: 0 !important;
+    /*border: 1px solid red;*/
+}
+.details .right{
+    padding: 30px 30px 30px 60px;   /*代做给的padding: 30px;*/
+    /*background-color: #B6B6B6;*/
+}
+.flex{
+    display: flex;
+    justify-content: center;
+}
+.flex1{
+    display: flex;
+    /*justify-content: left;*/
+    align-items: center;
+}
+.main-image img{
+    width: 95%;
+    height: 82vh;
+    margin-left: 3%;
+}
+.option img{
+    width: 76px;
+    height: 76px;
+    padding: 6px;
+    border-radius: 50px;
+    margin-bottom: 2%;
+}
+.option img:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.3);
+}
+.details .right h3{
+    color: #af827d;
+    margin: 20px 10px 50px 0;
+    font-size: 3vmin;
+    font-weight: 600;
+    /*background-color: #8E9FAF;*/
+}
+.details .right h5, p, small{
+    color: #837d7c;
+}
+.details .right h4{
+    font-size: 2vmin;
+    font-weight: 600;
+    color: red;
+    /*background-color: #8E9FAF;*/
+}
+.details .right p{
+    margin: 40px 10px 60px 0;
+    line-height: 25px;
+    font-size: 1.5vmin;
+    /*background-color: #8E9FAF;*/
+}
+.details .right h5{
+    font-size: 1.8vmin;
+    font-weight: 600;
+    /*background-color: #8E9FAF;*/
+}
+.details .right .color{
+    margin-bottom: 20px;
+}
+.right label, .color span{
+    width: 25px;
+    height: 25px;
+    background: #000;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 15px 30px 20px 2px;
+}
+.right .color #col1{
+    background: #C4AA91;
+}
+.right .color #col2{
+    background: #949697;
+}
+.right .color #col3{
+    background: #efe0de;
+}
+.add input{
+    /*padding: 5px 30px 0 30px;   /* 此处得修改一下 1 实际显示效果 原视频也有点问题 */
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #c1908b;
+    margin-top: 15px;
+    height: 35px;
+    width: 18%;
+    padding: 0 5px;
+    text-align: center;
+}
+.right button{
+    width: 80%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: #c1908b;
+    margin-top: 18%;
+    margin-left: 5%;
+    border-radius: 30px;
+    color: #FFFFFF;
+    font-weight: 550;
+}
+.right button:hover{
+    cursor: pointer;
+    color: #c1908b;
+    background-color: #FFFFFF;
+    border: 3px solid #c1908b;
+}
+
+/* Similar Items List Style for LiHuang2.html */
+.items-container{
+    width: 100%;
+    height: auto;
+    /*margin-bottom: 3%;*/
+}
+.items{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0 !important;
+    /*background-color: #098B8C;*/
+}
+.items .list{
+    /*height: 98%;*/    /*感觉没用，我给注释了*/
+    /*background-color: #8E9FAF;*/
+    text-align: center;
+}
+.items .list img{
+    width: 95%;        /*代做给的值100%*/
+    height: 85%;       /*代做给的值85%*/
+    background-size: cover;
+    margin-top: 3%;
+}
+.items .list:hover{
+    /*transform: translateY(-24px);*/
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.items .list h3{
+    text-align: left;
+    padding: 13px 0 13px 12px;
+    font-size: 1.6vmin;
+    color: #393A3C;
+}
+.items .list p{
+    text-align: left;
+    color: #2D5562;
+    font-size: 1.2vmin;
+    padding-left: 12px;
+}
+
+/* Login & Signup Form Style for LiHuang2.html */
+.form-container{
+    width: 100%;
+    height: 500px;
+    /*min-height: 100vh;*/
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-color: cornflowerblue;*/
+}
+.form-wrapper{
+    width: 100%;
+    height: 100%;
+    /*min-height: 100vh;*/
+    padding-top: 2%;
+    margin-bottom: 2%;
+    border-top: 1px solid #B6B6B6;
+    background-color:#ffffff;
+    /*background-color: #c1908b;*/
+    /*padding: 30px;*/
+}
+.formStyle{
+    position: relative;
+    width: 90%;      /*代做给的值100%*/
+    /*background-color: #EA0B1A;*/
+    padding: 40px 30px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    perspective: 2700px;
+    margin-left: 4.5% !important;    /*代做给的值0*/
+}
+.formStyle .cover{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    /*background: greenyellow;*/
+    z-index: 98;
+    transition: all 1s ease;
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.formStyle .cover::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /*background: #65B8AA;*/
+    /*opacity: 0.5;
+    z-index: 100;*/
+    transform: rotateY(180deg);
+}
+.formStyle #flip:checked ~ .cover{
+    transform: rotateY(-180deg);
+}
+.formStyle .cover img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 12;
+    backface-visibility: hidden;
+}
+.formStyle .cover .back .backImg{
+    transform: rotateY(180deg);
+}
+.formStyle form{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+.formStyle .form-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-content .login-form,
+.form-content .signup-form{
+    width: calc(100% / 2 - 25px);
+    /*background: greenyellow;*/
+}
+form .form-content .title{
+    position: relative;
+    font-size: 2.5vmin;
+    font-weight: 500;
+    color: #333;
+}
+form .form-content .input-boxes{
+    margin-top: 30px;
+}
+form .form-content .input-box{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+}
+.form-content .input-box input{
+    height: 90%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0 30px;
+    font-size: 1.8vmin;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+.form-content .input-box input:focus,
+.form-content .input-box input:valid{
+    border-color: #65B8AA;
+}
+.form-content .input-box i{
+    position: absolute;
+    color: #65B8AA;
+    font-size: 17px;
+}
+form .form-content .text{
+    font-size: 14px;
+    font-weight: 500;
+    color: #333333;
+}
+form .form-content .text a{
+    color: #65B8AA;
+}
+form .form-content .text a:hover{
+    text-decoration: underline;
+}
+form .form-content .button{
+    color: #ffffff;
+    margin-top: 40px;
+}
+form .form-content .button input{
+    color: #ffffff;
+    background-color: #65B8AA;
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+form .form-content .button input:hover{
+    background: #098B8C;
+}
+form .form-content label{
+    color: #65B8AA;
+    cursor: pointer;
+}
+form .form-content label:hover{
+    text-decoration: underline;
+}
+form .form-content .login-text,
+form .form-content .sign-up-text{
+    text-align: center;
+    margin-top: 25px;
+}
+.formStyle #flip{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .nav-bar{
+        display: none;
+    }
+    .nav-menu{
+        display: block;
+        width: 20% !important;
+    }
+    .nav-logo{
+        width: 30% !important;
+    }
+    .nav{
+        justify-content: space-around;
+    }
+    .header-left{
+        display: none;
+    }
+    .header-rest{
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+    .banner-text input{
+        display: none;
+    }
+    .footer-bottom .box{
+        width: 50%;
+    }
+    .product-container{
+        margin-top: 12%;
+    }
+    .formStyle .cover{
+        display: none;
+    }
+    .form-content .login-form,
+    .form-content .signup-form{
+        width: 100%;
+    }
+    .form-content .signup-form{
+        display: none;
+    }
+    .formStyle #flip:checked ~ form .signup-form{
+        display: block;
+    }
+    .formStyle #flip:checked ~ form .login-form{
+        display: none;
+    }
+    .form-content .input-box input{
+        display: block;
+    }
+    .min-images{
+        width: 50%;
+    }
+    .main-image img{
+        height: 50vh;
+    }
+    .slideshow{
+        height: 250px;
+    }
+    .button-left, .button-right{
+        line-height: 220px;
+    }
+    .sale{
+        margin-left: 0 !important;
+    }
+}
+@media screen and (max-width: 580px){
+   .slide img{
+        width: 100%;
+    }
+    .formStyle .cover{
+        display: none;
+    }
+    .form-content .login-form,
+    .form-content .signup-form{
+        width: 100%;
+    }
+    .form-content .signup-form{
+        display: none;
+    }
+    .formStyle #flip:checked ~ form .signup-form{
+        display: block;
+    }
+    .formStyle #flip:checked ~ form .login-form{
+        display: none;
+    }
+    .form-content .input-box input{
+        display: block;
+    }
+}
